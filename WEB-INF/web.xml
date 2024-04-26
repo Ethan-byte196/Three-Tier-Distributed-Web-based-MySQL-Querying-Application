@@ -1,0 +1,126 @@
+<!--  
+Name: Ethan Fuller  
+Course: CNT 4714 – Spring 2024 – Project Four 
+Assignment title:  A Three-Tier Distributed Web-Based Application 
+Date:  April 23, 2024 
+-->
+<web-app>
+    <display-name>Project 4 CNT 4714 Spring 2024</display-name>
+    <description>Multitiered Enterprise Application</description>
+
+
+    <servlet>
+        <description>
+            This will be used to see if the user's login is valid(hence which page they should go),
+            if not then go to the error page.
+        </description>
+        <servlet-name>authentication</servlet-name>
+        <servlet-class>Authenticate</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>authentication</servlet-name>
+        <url-pattern>/authentication</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <description>
+            client-servlet for all client user commands and queries
+        </description>
+        <servlet-name>client</servlet-name>
+        <servlet-class>Client</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>client</servlet-name>
+        <url-pattern>/client</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <description>
+            insert supplier-servlet for all client user commands and queries
+        </description>
+        <servlet-name>supplierInsert</servlet-name>
+        <servlet-class>SupplierInsert</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>supplierInsert</servlet-name>
+        <url-pattern>/suppliersInsert</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <description>
+            insert part-servlet for all client user commands and queries
+        </description>
+        <servlet-name>partInsert</servlet-name>
+        <servlet-class>PartInsert</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>partInsert</servlet-name>
+        <url-pattern>/partsInsert</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <description>
+            insert job-servlet for all client user commands and queries
+        </description>
+        <servlet-name>jobInsert</servlet-name>
+        <servlet-class>JobInsert</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>jobInsert</servlet-name>
+        <url-pattern>/jobsInsert</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <description>
+            insert shipment-servlet for all client user commands and queries
+        </description>
+        <servlet-name>shipmentInsert</servlet-name>
+        <servlet-class>ShipmentInsert</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>shipmentInsert</servlet-name>
+        <url-pattern>/shipmentsInsert</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <description>
+            accountant-servlet for all client user commands and queries
+        </description>
+        <servlet-name>accountant</servlet-name>
+        <servlet-class>Accountant</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>accountant</servlet-name>
+        <url-pattern>/accountant</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <description>
+            root-servlet for all client user commands and queries
+        </description>
+        <servlet-name>root</servlet-name>
+        <servlet-class>Root</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>root</servlet-name>
+        <url-pattern>/root</url-pattern>
+    </servlet-mapping>
+
+    <welcome-file-list>
+        <welcome-file>authentication.html</welcome-file>
+    </welcome-file-list>
+
+</web-app>
